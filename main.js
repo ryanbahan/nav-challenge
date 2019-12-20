@@ -3,14 +3,6 @@ var navBar = document.querySelector('nav');
 
 navBar.addEventListener('click', toggleView)
 
-function makeActive() {
-    var navItems = navBar.querySelectorAll('li');
-    for (var i = 0; i < navItems.length; i++) {
-      navItems[i].classList.remove('active-nav')
-    };
-    event.target.classList.add('active-nav')
-}
-
 function toggleView() {
   if (event.target.classList.contains('all-courses')) {
     displayAllCoursesView();
@@ -54,4 +46,12 @@ function displayArchivedView() {
           <h2>Focus on only the courses that matter to you.</h2>
           <p><a href="#">Go to the All Courses tab</a> to archive.</p>
         </div>`
+}
+
+function makeActive() {
+    var navItems = navBar.querySelectorAll('li');
+    for (var i = 0; i < navItems.length; i++) {
+      navItems[i].classList.remove('active-nav')
+    };
+    event.target.classList.add('active-nav')
 }
